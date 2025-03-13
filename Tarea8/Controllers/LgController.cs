@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using Tarea8.Contex;
 using Tarea8.DTO;
 using Tarea8.Encriptor;
@@ -29,26 +30,32 @@ namespace Tarea8.Controllers
         [Route("Registrarte")]
         public async Task<IActionResult> Registrarte(UserDTO Us)
         {
-            var model = new RegiUs
+            try
             {
-                Username = Us.Username,
-                Password = _utilidad.encriptar(Us.Password),
-                refreshtoken1 = Guid.NewGuid().ToString(),
-                TokenExpired = DateTime.UtcNow.AddMinutes(7)
-            };
+                var model = new RegiUs
+                {
+                    Username = Us.Username,
+                    Password = _utilidad.encriptar(Us.Password),
+                    refreshtoken1 = Guid.NewGuid().ToString(),
+                    TokenExpired = DateTime.UtcNow.AddMinutes(7)
+                };
 
-            await _user.RegiUss.AddAsync(model);
-            await _user.SaveChangesAsync();
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string json = JsonSerializer.Serialize(model, options);
+                string filepath = "Archivo.txt";
+                System.IO.File.WriteAllText(filepath, json);
 
-            if (model.IdR != 0)
-            {
-                return StatusCode(StatusCodes.Status200OK, new { isSuccess = true });
+                await _user.RegiUss.AddAsync(model);
+                await _user.SaveChangesAsync();
+
+                return StatusCode(StatusCodes.Status200OK, new { isSuccess = model.IdR != 0 });
             }
-            else
+            catch (Exception)
             {
-                return StatusCode(StatusCodes.Status200OK, new { isSuccess = false });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { isSuccess = false });
             }
         }
+
 
         [HttpPost]
         [Route("LOGIN")]
