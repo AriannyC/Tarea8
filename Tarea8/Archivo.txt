@@ -1,0 +1,15 @@
+{
+  "IdR": 0,
+  "Username": "ramona",
+  "Password": "b7158b64a98516b31d0c23609f69265a868c594dda5b3c8da9e13159e209c9b6",
+  "refreshtoken1": "d416691b-de00-4024-bd0a-a28f04bfc96e",
+  "TokenExpired": "2025-03-13T19:26:48.7539213Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}{
+  "IdR": 0,
+  "Username": "mane",
+  "Password": "6c6226f9d9cc9f936123fa3151503cbf0eaa64e30e570c8a86e110b39bc62312",
+  "refreshtoken1": "1e4e4592-a556-4fb8-9904-3662a37edde8",
+  "TokenExpired": "2025-03-13T19:42:43.6066201Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}

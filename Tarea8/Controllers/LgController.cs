@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
@@ -43,7 +43,8 @@ namespace Tarea8.Controllers
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 string json = JsonSerializer.Serialize(model, options);
                 string filepath = "Archivo.txt";
-                System.IO.File.WriteAllText(filepath, json);
+                System.IO.File.AppendAllText(filepath, json + Environment.NewLine);
+
 
                 await _user.RegiUss.AddAsync(model);
                 await _user.SaveChangesAsync();
