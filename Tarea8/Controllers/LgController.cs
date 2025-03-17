@@ -56,7 +56,33 @@ namespace Tarea8.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { isSuccess = false });
             }
         }
+        [HttpPost]
 
+        public async Task<IActionResult> Historial()
+        {
+            string path = "Archivo.txt";
+
+
+            if (!System.IO.File.Exists(path))
+            
+
+                return NotFound("No existe");
+
+
+
+                string rea= System.IO.File.ReadAllText(path);
+
+
+            if (rea == null)
+            {
+
+                return Ok("vacio");
+            }
+
+            return Ok(rea);
+
+
+        }
 
         [HttpPost]
         [Route("LOGIN")]

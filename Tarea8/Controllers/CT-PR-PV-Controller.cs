@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MinimalApi;
 using Tarea8.Contex;
 using Tarea8.DTO;
+using Tarea8.Models;
 using Tarea8.Repository;
 
 namespace Tarea8.Controllers
@@ -17,10 +18,13 @@ namespace Tarea8.Controllers
     public class CT_PR_PV_Controller : ControllerBase
     {
         private readonly UserContex _context;
-        public CT_PR_PV_Controller(UserContex cont)
+        private readonly ProductReposy _repositorio;
+
+        public CT_PR_PV_Controller(UserContex cont, ProductReposy repositorio)
         { 
         
            _context = cont;
+            _repositorio = repositorio;
         
         
         }
@@ -76,8 +80,51 @@ namespace Tarea8.Controllers
             var tot = await _context.prod.Where(x=>x.Id>=0).CountAsync();
            return Ok(new { cant=tot });
         }
-    
-    
-    
+
+        // PUT: api/Users/5 actualizar
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUser(int id, Producto user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+
+            await _repositorio.Updateasync(user);
+            return NoContent();
+
+        }
+
+        // POST: api/Users crear
+        [HttpPost]
+        public async Task<ActionResult<Producto>> PostUser(Producto prodr)
+        {
+            if (!ModelState.IsValid)
+            {
+
+                return BadRequest(prodr);
+            }
+            
+           
+          await _repositorio.Addasync(prodr);
+            return NoContent();
+            
+        }
+
+        // DELETE: api/Users/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var user = await _repositorio.GetBYId(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            await _repositorio.Deleteasync(user);
+            return NoContent();
+        }
+
+
     }
 }
