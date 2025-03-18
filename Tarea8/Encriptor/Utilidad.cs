@@ -85,7 +85,7 @@ namespace Tarea8.Encriptor
             var refresh = new Refresh
             {
                 refreshtoken = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
-                Expires = DateTime.Now.AddMinutes(1)
+                Expires = DateTime.Now.AddMinutes(30)
 
             };
             return refresh;

@@ -10,6 +10,6 @@ namespace Tarea8.Models
         public string Nombre{ get; set; }
 
         //navigation Property
-        public ICollection<Producto> ProductosNC { get; set; }
+        public virtual ICollection<Producto> ProductosNC { get; set; }
     }
 }

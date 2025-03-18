@@ -81,49 +81,7 @@ namespace Tarea8.Controllers
            return Ok(new { cant=tot });
         }
 
-        // PUT: api/Users/5 actualizar
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, Producto user)
-        {
-            if (id != user.Id)
-            {
-                return BadRequest();
-            }
-
-            await _repositorio.Updateasync(user);
-            return NoContent();
-
-        }
-
-        // POST: api/Users crear
-        [HttpPost]
-        public async Task<ActionResult<Producto>> PostUser(Producto prodr)
-        {
-            if (!ModelState.IsValid)
-            {
-
-                return BadRequest(prodr);
-            }
-            
-           
-          await _repositorio.Addasync(prodr);
-            return NoContent();
-            
-        }
-
-        // DELETE: api/Users/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
-        {
-            var user = await _repositorio.GetBYId(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            await _repositorio.Deleteasync(user);
-            return NoContent();
-        }
+      
 
 
     }

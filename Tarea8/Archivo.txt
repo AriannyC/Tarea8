@@ -13,3 +13,75 @@
   "TokenExpired": "2025-03-13T19:42:43.6066201Z",
   "TokenCreated": "0001-01-01T00:00:00"
 }
+{
+  "IdR": 0,
+  "Username": "LOST",
+  "Password": "7c5f6c8283f4bdf04207a6d6bcd76277851a4fa4f9b7eed70acee06267ee908f",
+  "refreshtoken1": "95dca990-ac33-4b35-9d98-68c777754de6",
+  "TokenExpired": "2025-03-17T17:36:51.9040568Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "LOSTE",
+  "Password": "7c5f6c8283f4bdf04207a6d6bcd76277851a4fa4f9b7eed70acee06267ee908f",
+  "refreshtoken1": "e0a1d922-ecc7-40b6-b7ce-47117918c2d5",
+  "TokenExpired": "2025-03-17T17:42:34.0521556Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "LOSTE2",
+  "Password": "7c5f6c8283f4bdf04207a6d6bcd76277851a4fa4f9b7eed70acee06267ee908f",
+  "refreshtoken1": "1c7ac335-6e4a-4121-928b-d30692ab3661",
+  "TokenExpired": "2025-03-17T18:19:32.4090917Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "LOSTE2m",
+  "Password": "7c5f6c8283f4bdf04207a6d6bcd76277851a4fa4f9b7eed70acee06267ee908f",
+  "refreshtoken1": "ddd4d40b-eebf-4302-b0af-df800369595a",
+  "TokenExpired": "2025-03-17T18:26:05.6888939Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "LOSTE2me",
+  "Password": "7c5f6c8283f4bdf04207a6d6bcd76277851a4fa4f9b7eed70acee06267ee908f",
+  "refreshtoken1": "564ad8b2-d5a2-4683-9a12-860dfe27597d",
+  "TokenExpired": "2025-03-17T19:13:11.0551669Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "meli",
+  "Password": "59d8bfba8be3c5492980b4a47b4d30004f1e9d85682af81d3f4288ec719bb094",
+  "refreshtoken1": "c625523e-cffe-4aa1-b2fb-8724167eb880",
+  "TokenExpired": "2025-03-17T20:23:30.9480577Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "ramon",
+  "Password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+  "refreshtoken1": "27dad99b-5743-444b-a1a0-4613fc5aecc9",
+  "TokenExpired": "2025-03-18T00:52:56.2124198Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "ramon2",
+  "Password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+  "refreshtoken1": "3f99a584-e169-4224-b660-13b071c52a77",
+  "TokenExpired": "2025-03-18T00:55:01.0253373Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}
+{
+  "IdR": 0,
+  "Username": "ramona",
+  "Password": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414",
+  "refreshtoken1": "96e4dfc2-382a-419c-8220-fa369b5b3269",
+  "TokenExpired": "2025-03-18T01:15:09.7542527Z",
+  "TokenCreated": "0001-01-01T00:00:00"
+}

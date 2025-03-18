@@ -12,6 +12,6 @@ namespace Tarea8.Models
 
         public string Contacto { get; set; }
         //navigation
-        public ICollection<Producto> ProductosN { get; set; }
+        public virtual ICollection<Producto> ProductosN { get; set; }
     }
 }

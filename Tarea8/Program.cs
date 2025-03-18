@@ -14,6 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<UserContex>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<CategoriReposy>();
+builder.Services.AddScoped<ProveedorReposy>();
+builder.Services.AddScoped<ProductReposy>();
+
+
 builder.Services.AddSingleton<Utilidad>();
 builder.Services.AddHttpContextAccessor();
 
